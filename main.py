@@ -80,5 +80,5 @@ async def add_review_to_book(book_id: int, review: Review):
     raise HTTPException(status_code=404, detail="Book not found")
 
 # Vercel handler
-from mangum import Adapter
-handler = Adapter(app) 
+from mangum import Mangum
+handler = Mangum(app) 
