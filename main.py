@@ -77,8 +77,4 @@ async def add_review_to_book(book_id: int, review: Review):
         if book.id == book_id:
             book.reviews.append(review)
             return book
-    raise HTTPException(status_code=404, detail="Book not found")
-
-# Vercel handler
-from mangum import Mangum
-handler = Mangum(app) 
+    raise HTTPException(status_code=404, detail="Book not found") 
